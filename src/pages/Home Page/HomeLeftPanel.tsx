@@ -1,10 +1,19 @@
 import { Box, Button, Divider, Typography } from "@mui/material";
 import React from "react";
-import { Add } from "@mui/icons-material"; // Import an icon (Add icon for this example)
+import { Add } from "@mui/icons-material";
+import InboxIcon from "@mui/icons-material/Inbox";
+import TaskAltIcon from "@mui/icons-material/TaskAlt";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
 export const HomeLeftPanel = (props: Props) => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <Box width="100%" p={2}>
       <Box
@@ -32,12 +41,36 @@ export const HomeLeftPanel = (props: Props) => {
         </Button>
       </Box>
       <Box mt={2} display="flex" flexDirection="column" gap={1}>
-        <Typography color="#949494ff" fontSize={"14px"}>
-          {" "}
+        <Typography
+          color="#949494ff"
+          fontSize={"14px"}
+          sx={{
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            "&:hover": {
+              color: "#3b5CDE",
+            },
+          }}
+          onClick={() => handleNavigation("/inbox")}
+        >
+          <InboxIcon sx={{ fontSize: "small", marginRight: 1 }} />
           Inbox
         </Typography>
-        <Typography color="#949494ff" fontSize={"14px"}>
-          {" "}
+        <Typography
+          color="#949494ff"
+          fontSize={"14px"}
+          sx={{
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            "&:hover": {
+              color: "#3b5CDE",
+            },
+          }}
+          onClick={() => handleNavigation("/tasks")}
+        >
+          <TaskAltIcon sx={{ fontSize: "small", marginRight: 1 }} />
           My Tasks
         </Typography>
       </Box>

@@ -1,13 +1,13 @@
 import React from "react";
 import { Allotment } from "allotment";
-import "allotment/dist/style.css"; // Import the required styles for Allotment
+import "allotment/dist/style.css";
 import { Box } from "@mui/material";
+import { Outlet } from "react-router-dom";
 import { HomeLeftPanel } from "./Home Page/HomeLeftPanel";
 
 const Home = () => (
   <Box height={"100vh"}>
     <Allotment>
-      {" "}
       <Allotment.Pane maxSize={280} minSize={120} preferredSize={200}>
         <Box
           sx={{
@@ -25,6 +25,7 @@ const Home = () => (
           </Box>
         </Box>
       </Allotment.Pane>
+
       <Allotment.Pane>
         <Box
           sx={{
@@ -37,8 +38,7 @@ const Home = () => (
             borderBottomRightRadius: "10px",
           }}
         >
-          <h2>🏠 Home Page</h2>
-          <p>Welcome to the home page. This is the main content area.</p>
+          <Outlet /> {/* This will render the nested routes */}
         </Box>
       </Allotment.Pane>
     </Allotment>
