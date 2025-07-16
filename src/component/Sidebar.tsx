@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Box from "@mui/material/Box";
 import { Home, Info, Settings } from "@mui/icons-material";
+import { Typography } from "@mui/material";
 
 const Sidebar = () => {
   const navigate = useNavigate();
@@ -16,8 +17,8 @@ const Sidebar = () => {
       sx={{
         position: "fixed",
         top: 38,
-        left: 5,
-        width: 50,
+        left: 12,
+        width: 30,
         height: "100%",
         backgroundColor: "#1A2242",
         color: "white",
@@ -49,7 +50,7 @@ const Sidebar = () => {
             }
           >
             <div>{item.icon}</div>
-            <div>{item.label}</div>
+            <Typography fontSize={"12px"}>{item.label}</Typography>
           </li>
         ))}
       </ul>

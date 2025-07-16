@@ -17,7 +17,7 @@ export const Inbox = (props: Props) => {
   };
 
   return (
-    <Box p={2}>
+    <Box p={2} sx={{ height: "100%", overflowY: "auto", mb: 10 }}>
       <Typography fontWeight={"bold"}> Inbox</Typography>
       <Box borderBottom={1} borderColor={"#4b4b4bff"}>
         <Tabs

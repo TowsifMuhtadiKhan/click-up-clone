@@ -7,6 +7,7 @@ import Header from "./component/Header";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { Inbox } from "./pages/Home Page/Inbox";
+import { MyTasks } from "./pages/Home Page/MyTasks/MyTasks";
 
 // Create the MUI theme
 const theme = createTheme({
@@ -27,7 +28,7 @@ const theme = createTheme({
     MuiTabs: {
       styleOverrides: {
         root: {
-          backgroundColor: "#111111", // background color for tabs
+          backgroundColor: "#090909", // background color for tabs
         },
         indicator: {
           backgroundColor: "#eeeeeeff", // White indicator for tabs
@@ -54,14 +55,14 @@ function App() {
       <Router>
         <div style={{ display: "flex", height: "100vh" }}>
           <Sidebar />
-          <div style={{ marginLeft: 95, width: "100%", overflow: "hidden" }}>
+          <div style={{ marginLeft: 85, width: "100%", overflow: "hidden" }}>
             <Header />
             <main
               style={{
                 marginTop: 60,
                 marginBottom: 40,
                 minHeight: "calc(100vh - 100px)",
-                background: "#111111",
+                background: "#090909",
                 overflowY: "auto",
               }}
             >
@@ -69,7 +70,7 @@ function App() {
                 <Route path="/" element={<Home />}>
                   <Route index element={<h2>🏠 Home Page</h2>} />
                   <Route path="inbox" element={<Inbox />} />
-                  {/* <Route path="tasks" element={<MyTasks />} /> */}
+                  <Route path="tasks" element={<MyTasks />} />
                 </Route>
                 <Route path="/about" element={<About />} />
                 <Route path="/settings" element={<Settings />} />

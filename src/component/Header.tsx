@@ -27,12 +27,15 @@ const Header = () => {
           left: 0,
           right: 0,
           height: 20,
-          backgroundColor: "#111",
+          backgroundColor: "#090909",
           color: "white",
           zIndex: 10,
         }}
-        px={1}
+        px={1.5}
         py={2}
+        display={"flex"}
+        justifyContent={"space-between"}
+        alignItems={"center"}
       >
         <Box display={"flex"} alignItems="center" width={"100%"}>
           <Box
@@ -85,8 +88,8 @@ const Header = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                flexGrow: 1, // Make the search box take as much space as possible
-                mx: 2, // Add spacing on the sides
+                flexGrow: 1,
+                mx: 2,
               }}
             >
               <TextField

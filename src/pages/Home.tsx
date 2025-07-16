@@ -8,7 +8,7 @@ import { HomeLeftPanel } from "./Home Page/HomeLeftPanel";
 const Home = () => (
   <Box height={"100vh"}>
     <Allotment>
-      <Allotment.Pane maxSize={280} minSize={120} preferredSize={200}>
+      <Allotment.Pane maxSize={280} minSize={120} preferredSize={280}>
         <Box
           sx={{
             height: "100%",

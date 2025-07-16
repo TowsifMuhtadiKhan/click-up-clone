@@ -15,7 +15,7 @@ export const HomeLeftPanel = (props: Props) => {
   };
 
   return (
-    <Box width="100%" p={2}>
+    <Box width="100%" px={2} py={0}>
       <Box
         display="flex"
         alignItems="center"
